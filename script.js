@@ -1,5 +1,5 @@
 // script.js
-const API_URL = 'https://safa-brownie.onrender.com';
+const API_URL = 'https://safa-brownie.onrender.com/api/reviews';
 
 // Submit Review
 document.getElementById('review-form').addEventListener('submit', async (e) => {

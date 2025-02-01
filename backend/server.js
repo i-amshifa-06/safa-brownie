@@ -15,7 +15,7 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: ['http://localhost:3000', 'https://your-frontend-url.vercel.app']
+  origin: ['http://localhost:3000', 'https://i-amshifa-06.github.io/safa-brownie']
 }));
 app.use(express.json());
 
