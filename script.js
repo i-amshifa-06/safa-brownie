@@ -1,52 +1,31 @@
+// script.js
+const API_URL = 'https://safa-brownie.onrender.com/api/reviews';
+
 // Submit Review
 document.getElementById('review-form').addEventListener('submit', async (e) => {
     e.preventDefault();
     
-    try {
-      const response = await fetch('https://safa-brownie-backend.herokuapp.com/api/reviews', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          name: document.getElementById('name').value,
-          feedback: document.getElementById('feedback').value,
-          rating: currentRating
-        }),
-      });
-  
-      if (response.ok) {
-        // Refresh reviews after submission
-        fetchReviews();
-        document.getElementById('review-form').reset();
-        rate(0);
-      }
-    } catch (error) {
-      console.error('Error submitting review:', error);
-    }
-  });
-  
-  async function fetchReviews() {
-    try {
-        const reviews = await fetch('/api/reviews').then(response => response.json());
+    const reviewData = {
+        name: document.getElementById('name').value,
+        feedback: document.getElementById('feedback').value,
+        rating: currentRating
+    };
 
-        reviews.forEach(review => {
-            const reviewElement = document.createElement('div');
-            reviewElement.className = 'review';
-            return (
-                <div>
-                  <strong>{name}</strong>
-                  <p>{feedback}</p>
-                  <div className="rating">{'⭐'.repeat(rating)}</div>
-                </div>
-              );
-            // Assuming 'slider' is a valid DOM element where you want to append the reviews
-            slider.appendChild(reviewElement);
+    try {
+        const response = await fetch(API_URL, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(reviewData),
         });
-    } catch (error) {
-        console.error('Error fetching reviews:', error);
-    }
-}
 
-// Initial fetch
-fetchReviews();
+        if (response.ok) {
+            fetchReviews(); // Refresh reviews
+            document.getElementById('review-form').reset();
+            rate(0); // Reset rating
+        }
+    } catch (error) {
+        console.error('Error submitting review:', error);
+    }
+});

@@ -1,3 +1,10 @@
+mongoose.connect(process.env.MONGODB_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
+
+
+
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
