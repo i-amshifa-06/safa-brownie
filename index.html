@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safa Brownie</title>
+    <!-- HTML (Add inside the <head> tag) -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="logo.jpg" type="image/x-icon">
+</head>
+<body>
+    <!-- Header Section -->
+    
+<!-- Header Section -->
+<header>
+    <!-- Logo and Name -->
+    <div class="logo">
+        <img src="logo.jpg" alt="Safa Brownie Logo">
+        <span>Safa Brownie</span>
+    </div>
+
+    <!-- Hamburger Toggle -->
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="hamburger">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+    </label>
+
+    <!-- Navigation Links -->
+    <nav class="nav-links">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Overlay for Click Outside -->
+    <label for="nav-toggle" class="overlay"></label>
+</header>
+
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Safa Brownie</h1>
+            <button onclick="location.href='#menu'">View Menu</button>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+<section id="menu" class="menu">
+    <h2>Our Menu</h2>
+    <div class="menu-grid">
+        <!-- Double Chocolate Brownie -->
+        <a href="double-chocolate.html">
+        <div class="menu-item">
+            <img src="double-choclate.jpg" alt="Double Chocolate Brownie">
+            <h3>Double Chocolate Brownie</h3>
+            <button >View Details</button>
+        </div>
+    </a>
+
+        
+        <!-- Classic Brownie -->
+        <a href="classic-brownie.html">
+        <div class="menu-item">
+            <img src="classic-brownie.jpg" alt="Classic Brownie">
+            <h3>Classic Brownie</h3>
+            <button onclick="window.location.href='classic.html'">View Details</button>
+        </div></a>
+
+        <!-- Classic Brownie -->
+        <a href="khunafa-brownie.html">
+        <div class="menu-item">
+            <img src="khunafa-brownie.jpg" alt="khunafa Brownie">
+            <h3>Khunafa Brownie</h3>
+            <button onclick="window.location.href='classic.html'">View Details</button>
+        </div></a>
+
+
+        <!-- Oreo Brownie -->
+        <a href="oreo-brownie.html">
+        <div class="menu-item">
+            <img src="oreo-brownie.jpg" alt="Oreo Brownie">
+            <h3>Oreo Brownie</h3>
+            <button onclick="window.location.href='oreo.html'">View Details</button>
+        </div></a>
+
+        <!-- Brownie Balls -->
+         <a href="brownie-balls.html">
+        <div class="menu-item">
+            <img src="brownie-balls.jpg" alt="Brownie Balls">
+            <h3>Brownie Balls</h3>
+            <button onclick="window.location.href='brownie-balls.html'">View Details</button>
+        </div></a>
+
+        <!-- Fudge Brownie -->
+         <a href="fudge-brownie.html">
+        <div class="menu-item">
+            <img src="fudge-brownie.jpg" alt="Fudge Brownie">
+            <h3>Fudge Brownie</h3>
+            <button onclick="window.location.href='fudge.html'">View Details</button>
+        </div></a>
+    </div>
+</section>
+
+    <!-- HTML -->
+<section id="about" class="about">
+    <div class="about-content">
+    <center>
+        <h2>About Our Sweet Journey</h2>
+        </center>
+         <!-- Quote Card 2 -->
+            <div class="quote-card">
+                <p>"Baked with love since 2025"</p>
+                <div class="quote-signature">~ Safa</div>
+            </div>
+             <div class="about-text">
+            <p>What started as a home kitchen experiment has become People's favorite brownie destination. Every bite tells a story of passion and perfection.</p>
+        </div>
+        <center>
+        <h2>Our Brownie Gallery</h2>
+        </center>
+        <div class="gallery-grid">
+            <!-- Brownie Images -->
+            <div class="gallery-item"><img src="brownie1.jpg" alt="Brownie Variety 1"></div>
+            <div class="gallery-item"><img src="brownie2.jpg" alt="Brownie Variety 2"></div>
+            
+            <div class="gallery-item"><img src="brownie3.jpg" alt="Brownie Variety 3"></div>
+            <div class="gallery-item"><img src="brownie4.jpg" alt="Brownie Variety 4"></div>
+            
+           
+
+            <div class="gallery-item"><img src="brownie5.jpg" alt="Brownie Variety 5"></div>
+            <div class="gallery-item"><img src="brownie6.jpg" alt="Brownie Variety 6"></div>
+            <div class="gallery-item"><img src="brownie7.jpg" alt="Brownie Variety 7"></div>
+            <div class="gallery-item"><img src="brownie8.jpg" alt="Brownie Variety 8"></div>
+        </div>
+        
+       
+    </div>
+</section>
+
+    <!-- Reviews Section -->
+    <!-- Reviews Section -->
+<section id="reviews" class="reviews">
+<center>
+    <h2>Customer Reviews</h2>
+    </center>
+    <form id="review-form">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <textarea id="feedback" placeholder="Your Feedback" required></textarea>
+        <div class="rating-input">
+            <label for="rating">Rating:</label>
+            <select id="rating" required>
+                <option value="1">⭐</option>
+                <option value="2">⭐⭐</option>
+                <option value="3">⭐⭐⭐</option>
+                <option value="4">⭐⭐⭐⭐</option>
+                <option value="5">⭐⭐⭐⭐⭐</option>
+            </select>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+    <div class="reviews-container">
+        <div class="reviews-slider">
+            <!-- Reviews will be dynamically added here -->
+        </div>
+    </div>
+</section>
+
+    <!-- Contact Section -->
+<section id="contact" class="contact">
+    <div class="contact-container">
+        <h2>Reach Out to Us</h2>
+        <div class="contact-grid">
+            <!-- Phone -->
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <img src="call.jpg" alt="Phone">
+                </div>
+                <h3>Call Us</h3>
+                <p>+91 9585705598</p>
+                <a href="tel:+919585705598" class="contact-btn">Call Now</a>
+            </div>
+
+            <!-- WhatsApp -->
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <img src="whatsapp.jpg" alt="WhatsApp">
+                </div>
+                <h3>WhatsApp</h3>
+                <p>Instant Order Support</p>
+                <a href="https://wa.me/919585705598" 
+                   class="contact-btn whatsapp-btn" 
+                   target="_blank">
+                    Chat Now
+                </a>
+            </div>
+
+            <!-- Instagram -->
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <img src="instagram.jpg" alt="Instagram">
+                </div>
+                <h3>Instagram</h3>
+                <p>@_safa_brownie_</p>
+                <a href="https://www.instagram.com/_safa_brownie_?igsh=MXVlZGVxeWRpcGphMA==" 
+                   class="contact-btn instagram-btn" 
+                   target="_blank">
+                    Follow Us
+                </a>
+            </div>
+
+            <!-- Map -->
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <img src="map.jpg" alt="Location">
+                </div>
+                <h3>Our Location</h3>
+                <p>Puthumanai st, Elanthangudi, mailadurai district, Tamil Nadu, 609401</p>
+                <a href="https://goo.gl/maps/SimvipucocqoHgQg7" 
+                   class="contact-btn map-btn" 
+                   target="_blank">
+                    View Map
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+    <script src="script.js"></script>
+</body>
+</html>
