@@ -444,116 +444,89 @@ header {
     }
 
 
-/* Reviews Section */
-.reviews {
-    padding: 40px 20px;
+/* CSS */
+.customer-reviews {
+    padding: 4rem 2rem;
+    background: #fff5f7;
+    overflow: hidden;
+}
+
+.customer-reviews h2 {
     text-align: center;
-    background-color: #ded8d8;
-}
-
-.reviews h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
     color: #854553;
+    font-size: 2.2rem;
 }
 
-#review-form {
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-#review-form input,
-#review-form textarea,
-#review-form select,
-#review-form button {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-#review-form textarea {
-    resize: vertical;
-    height: 100px;
-}
-
-.rating-input {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 15px;
-}
-
-.rating-input label {
-    margin-right: 10px;
-    font-size: 18px;
-    color: #854553;
-}
-
-#review-form select {
-    width: auto;
-    padding: 5px;
-    font-size: 18px;
-}
-
-#review-form button {
-    background-color: #ac6f7e;
-    color: white;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-#review-form button:hover {
-    background-color: #854553;
-}
-
-/* Reviews Slider Animation */
-@keyframes slide {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-100%); }
+.reviews-container {
+    overflow-x: auto;
+    padding: 2rem 0;
+    scroll-behavior: smooth;
 }
 
 .reviews-slider {
     display: flex;
-    overflow: hidden;
-    gap: 10px;
-    padding: 20px;
-    margin-top: 20px;
+    gap: 2rem;
+    width: max-content;
+    animation: slide 25s linear infinite;
 }
 
+.review-card {
+    flex: 0 0 300px;
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+}
+
+.rating {
+    color: #ffd700;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.review-content p {
+    color: #6d4c5a;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.customer {
+    color: #854553;
+    font-weight: 500;
+    font-style: italic;
+}
+
+/* Auto-Scroll Animation */
+@keyframes slide {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-300px * 5 - 2rem * 4)); } /* (Card width * 5) + (gap * 4) */
+}
+
+/* Pause on Hover */
 .reviews-slider:hover {
     animation-play-state: paused;
 }
 
-.review {
-    flex: 0 0 auto;
-    width: 300px;
-    padding: 20px;
-    background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: left;
-    animation: slide 20s linear infinite;
-}
-.review strong {
-    display: block;
-    font-size: 18px;
-    color: #854553;
-    margin-bottom: 10px;
+/* Hide Scrollbar */
+.reviews-container::-webkit-scrollbar {
+    display: none;
 }
 
-.review p {
-    font-size: 16px;
-    color: #333;
-    margin-bottom: 10px;
+/* Responsive Design */
+@media (max-width: 768px) {
+    .review-card {
+        flex: 0 0 250px;
+    }
+
+    @keyframes slide {
+        100% { transform: translateX(calc(-250px * 5 - 2rem * 4)); }
+    }
 }
 
 /* Contact Section CSS */
@@ -566,6 +539,13 @@ header {
     max-width: 1000px;
     margin: 0 auto;
     text-align: center;
+}
+
+.contact-container h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #854553;
+    font-size: 2.2rem;
 }
 
 .contact-grid {
